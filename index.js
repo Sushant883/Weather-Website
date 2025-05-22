@@ -58,3 +58,18 @@ searchBtn.addEventListener('click', async () => {
             default:
                 image.src = '';
         }
+        temperature.innerHTML = `${parseInt(data.main.temp)}°C`;
+        description.innerHTML = `${data.weather[0].description}`;
+        humidity.innerHTML = `${data.main.humidity}%`;
+        wind.innerHTML = `${data.wind.speed} Km/h`;
+
+        weatherBox.style.display = '';
+        weatherDetails.style.display = '';
+        weatherBox.classList.add('fadeIn');
+        weatherDetails.classList.add('fadeIn');
+        container.style.height = '590px';
+
+    } catch (error) {
+        console.error("API fetch error:", error);
+    }
+});
