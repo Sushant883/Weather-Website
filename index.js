@@ -28,3 +28,33 @@ searchBtn.addEventListener('click', async () => {
             error404.classList.add('fadeIn');
             return;
         }
+
+        error404.style.display = 'none';
+        error404.classList.remove('fadeIn');
+
+        const image = weatherBox.querySelector('img');
+        const temperature = weatherBox.querySelector('.temperature');
+        const description = weatherBox.querySelector('.description');
+        const humidity = weatherDetails.querySelector('.humidity span');
+        const wind = weatherDetails.querySelector('.wind span');
+
+        // ✅ Weather image based on condition
+        switch (data.weather[0].main) {
+            case 'Clear':
+                image.src = 'images/clear.png';
+                break;
+            case 'Rain':
+                image.src = 'images/rain.png';
+                break;
+            case 'Snow':
+                image.src = 'images/snow.png';
+                break;
+            case 'Clouds':
+                image.src = 'images/cloud.png';
+                break;
+            case 'Haze':
+                image.src = 'images/mist.png';
+                break;
+            default:
+                image.src = '';
+        }
