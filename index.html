@@ -41,4 +41,31 @@
         
     </header>
   
-  
+    <section class="hero">
+        <div class="hero-content">
+          <h1><span>Weather</span> Updates in Real-Time</h1>
+          <p>Get accurate forecasts, temperature, and air conditions right where you are — instantly!</p>
+          
+          <!-- this the search section import from the above -->
+          <div class="container">
+            <!-- Search Box -->
+            <div class="search-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="Enter your location">
+                <button class="fa-solid fa-magnifying-glass-location"></button>
+                
+            </div>
+    
+            <!-- Error Box -->
+            <div class="not-found" style="display: none;">
+                <img src="" alt="Not found">
+                <p>Oops! Invalid location :/</p>
+            </div>
+    
+            <!-- Weather Box -->
+            <div class="weather-box" style="display: none;">
+                <img src="" alt="Weather">
+                <p class="temperature"></p>
+                <p class="description"></p>
+            </div>
+    
